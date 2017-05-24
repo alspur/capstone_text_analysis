@@ -17,6 +17,7 @@ capstone_links <- sdp_df %>%
   filter(link_present == TRUE) %>%
   mutate(clean_link = str_extract(content, "https://sdp.cepr.harvard.edu/files/cepr-sdp/files/.+\\.pdf"))
 
+# download report pdfs and save them in '/reports'
 for(i in seq_along(1:length(capstone_links$clean_link))){
   
   report_url <- capstone_links$clean_link[i]
