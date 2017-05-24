@@ -55,3 +55,6 @@ ggraph(bigram_graph, layout = "fr") +
   geom_node_point(color = "lightblue", size = 3) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 1) +
   theme_void()
+
+# save plot
+ggsave("figures/capstone_bigrams.png", width = 12, height = 8, units = "in")
